@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SharePoint Portal Mockup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+    header {
+      background: #0078d7;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #f0f0f0;
+      padding: 15px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    nav a.active {
+      color: #0078d7;
+      text-decoration: underline;
+    }
+    .container {
+      padding: 20px;
+    }
+    .section {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #ddd;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Department SharePoint Portal</h1>
+  </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#documents">Documents</a>
+    <a href="#team">Team</a>
+    <a href="#resources">Resources</a>
+  </nav>
+  <div class="container">
+    <div class="section" id="home">
+      <h2>Welcome</h2>
+      <p>This is the home section of the department portal. Use the navigation bar to explore.</p>
+    </div>
+    <div class="section" id="documents">
+      <h2>Document Library</h2>
+      <p>Upload, download, and manage project documents here.</p>
+    </div>
+    <div class="section" id="team">
+      <h2>Team Members</h2>
+      <ul>
+        <li>Alice Tan – Project Manager</li>
+        <li>John Lim – Developer</li>
+        <li>You – Intern</li>
+      </ul>
+    </div>
+    <div class="section" id="resources">
+      <h2>Resources</h2>
+      <p>Useful links, guides, and tools for the team.</p>
+    </div>
+  </div>
+  <footer>
+    &copy; 2025 ExxonMobil Department Portal (Mockup)
+  </footer>
+
+  <script>
+    // Welcome alert
+    window.onload = function () {
+      alert("Welcome to the Department Portal!");
+    };
+
+    // Highlight active navigation link
+    const links = document.querySelectorAll("nav a");
+    links.forEach(link => {
+      link.addEventListener("click", function () {
+        links.forEach(l => l.classList.remove("active"));
+        this.classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>
